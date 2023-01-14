@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.3
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -22,8 +22,24 @@ let package = Package(
             dependencies: [],
             cSettings: [
                 .define("SQLITE_HAS_CODEC", to: "1"),
-                .define("SQLITE_TEMP_STORE", to: "3"),
+                .define("SQLITE_TEMP_STORE", to: "2"),
+                .define("SQLITE_SOUNDEX", to: nil),
+                .define("SQLITE_THREADSAFE", to: nil),
+                .define("SQLITE_ENABLE_RTREE", to: nil),
+                .define("SQLITE_ENABLE_STAT3", to: nil),
+                .define("DSQLITE_ENABLE_STAT4", to: nil),
+                .define("SQLITE_ENABLE_COLUMN_METADATA", to: nil),
+                .define("SQLITE_ENABLE_MEMORY_MANAGEMENT", to: nil),
+                .define("SQLITE_ENABLE_LOAD_EXTENSION", to: nil),
+                .define("SQLITE_ENABLE_FTS4", to: nil),
+                .define("SQLITE_ENABLE_FTS4_UNICODE61", to: nil),
+                .define("SQLITE_ENABLE_FTS3_PARENTHESIS", to: nil),
+                .define("SQLITE_ENABLE_UNLOCK_NOTIFY", to: nil),
+                .define("SQLITE_ENABLE_JSON1", to: nil),
+                .define("SQLITE_ENABLE_FTS5", to: nil),
                 .define("SQLCIPHER_CRYPTO_CC", to: nil),
+                .define("HAVE_USLEEP", to: "1"),
+                .define("SQLITE_MAX_VARIABLE_NUMBER", to: "99999"),
                 .define("NDEBUG", to: "1")
             ],
             swiftSettings: [
